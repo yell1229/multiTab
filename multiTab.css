@@ -1,0 +1,9 @@
+@charset "utf-8";
+.tab_box{width:;}
+.tab_box>ul{overflow:hidden}
+.tab_box>ul>li{float:left;}
+.tab_box>div{display:none;width:598px;height:500px;border:1px solid #333;}
+.tab_box2{width:456px;margin:50px auto 0;}
+.tab_box2>ul{overflow:hidden}
+.tab_box2>ul>li{float:left;}
+.tab_box2>div{display:none;width:448px;height:300px;border:1px solid #333;}

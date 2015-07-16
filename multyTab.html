@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 7]> <html class="ie7" lang="ko"> <![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="shortcut icon" type="image/x-icon" href="" />
+<title>new_file</title>
+<link rel="stylesheet" type="text/css" href="http://eng.dangi.co.kr/css/engdangi/common/common.css" />
+<link rel="stylesheet" type="text/css" href="multiTab.css" />
+</head>
+<body>
+<div id="tab_box" class="tab_box">
+    <ul>
+        <li><a href="#cont_01"><img src="img/tab01_off.gif" alt="tab01" /></a></li>
+        <li><a href="#cont_02"><img src="img/tab02_on.gif" alt="tab02" /></a></li>
+        <li><a href="#cont_03"><img src="img/tab03_off.gif" alt="tab03" /></a></li>
+    </ul>
+    <div id="cont_01" class="cont_01"> cont01</div>
+    <div id="cont_02" class="cont_02" style="display:block;">cont02</div>
+    <div id="cont_03" class="cont_03">cont03</div>
+</div>
+
+<div id="tab_box2" class="tab_box">
+    <ul>
+        <li><a href="#cont_04"><img src="img/tab01_on.gif" alt="tab01" /></a></li>
+        <li><a href="#cont_05"><img src="img/tab02_off.gif" alt="tab02" /></a></li>
+        <li><a href="#cont_06"><img src="img/tab03_off.gif" alt="tab03" /></a></li>
+    </ul>
+    <div id="cont_04" class="cont_01" style="display:block;"> cont01</div>
+    <div id="cont_05" class="cont_02">cont02</div>
+    <div id="cont_06" class="cont_03">cont03</div>
+</div>
+
+<div id="tab_box3" class="tab_box">
+    <ul>
+        <li data-target="#cont07"><img src="img/tab01_on.gif" alt="tab01" /></li>
+        <li data-target="#cont08"><img src="img/tab02_off.gif" alt="tab02" /></li>
+        <li data-target="#cont09"><img src="img/tab03_off.gif" alt="tab03" /></li>
+    </ul>
+    <div id="cont07" class="cont_01" style="display:block;"> cont01</div>
+    <div id="cont08" class="cont_02">cont02</div>
+    <div id="cont09" class="cont_03">cont03</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="jquery.multiTab.js"></script>
+<script type="text/javascript">
+$('#tab_box li a').multiTab();
+$('#tab_box2 li a').multiTab();
+$('#tab_box3 li').multiTab('data-target', 'mouseenter');
+</script>
+</body>
+</html>
+
