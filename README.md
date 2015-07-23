@@ -10,12 +10,23 @@
 
     <script src="jquery.multiTab.js"></script>
     <script type="text/javascript">
+    // 기본 설정으로 사용할 때
     $('#tab_box li a').multiTab();
-    $('#tab_box3 li').multiTab('data-target', 'mouseenter');
+
+    // 속성만 설정하고자 할 때
+    $('#tab_box2 li').multiTab('attr: data-target');
+
+    // 이벤트만 설정하고자 할 때
+    $('#tab_box3 li a').multiTab('evt: mouseleave');
+
+    // 속성과 이벤트 모두 설정하고자 할 때
+    $('#tab_box4 li').multiTab({
+        attr : 'data-target',
+        evt  : 'mouseenter'
+    });
     </script>
 
- - 첫번째 인자값 : 가져와야하는 target (default:href)
- - 두번째 인자값: 이벤트  (default: click), 이벤트값을 적용시 첫번째 인자값을 써줘야 한다.
+- 수정 : yamoo9
 
 
 

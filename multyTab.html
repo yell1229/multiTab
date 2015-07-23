@@ -35,21 +35,41 @@
 
 <div id="tab_box3" class="tab_box">
     <ul>
-        <li data-target="#cont07"><img src="img/tab01_on.gif" alt="tab01" /></li>
-        <li data-target="#cont08"><img src="img/tab02_off.gif" alt="tab02" /></li>
-        <li data-target="#cont09"><img src="img/tab03_off.gif" alt="tab03" /></li>
+        <li><a href="#cont_04"><img src="img/tab01_on.gif" alt="tab01" /></a></li>
+        <li><a href="#cont_05"><img src="img/tab02_off.gif" alt="tab02" /></a></li>
+        <li><a href="#cont_06"><img src="img/tab03_off.gif" alt="tab03" /></a></li>
     </ul>
-    <div id="cont07" class="cont_01" style="display:block;"> cont01</div>
-    <div id="cont08" class="cont_02">cont02</div>
-    <div id="cont09" class="cont_03">cont03</div>
+    <div id="cont_04" class="cont_01" style="display:block;"> cont01</div>
+    <div id="cont_05" class="cont_02">cont02</div>
+    <div id="cont_06" class="cont_03">cont03</div>
 </div>
-
+<div id="tab_box4" class="tab_box">
+    <ul>
+        <li data-target="#cont10"><img src="img/tab01_on.gif" alt="tab01" /></li>
+        <li data-target="#cont11"><img src="img/tab02_off.gif" alt="tab02" /></li>
+        <li data-target="#cont12"><img src="img/tab03_off.gif" alt="tab03" /></li>
+    </ul>
+    <div id="cont10" class="cont_01" style="display:block;"> cont01</div>
+    <div id="cont11" class="cont_02">cont02</div>
+    <div id="cont12" class="cont_03">cont03</div>
+</div>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="jquery.multiTab.js"></script>
 <script type="text/javascript">
+// 기본 설정으로 사용할 때
 $('#tab_box li a').multiTab();
-$('#tab_box2 li a').multiTab();
-$('#tab_box3 li').multiTab('data-target', 'mouseenter');
+
+// 속성만 설정하고자 할 때
+$('#tab_box2 li').multiTab('attr: data-target');
+
+// 이벤트만 설정하고자 할 때
+$('#tab_box3 li a').multiTab('evt: mouseleave');
+
+// 속성과 이벤트 모두 설정하고자 할 때
+$('#tab_box4 li').multiTab({
+    attr : 'data-target',
+    evt  : 'mouseenter'
+});
 </script>
 </body>
 </html>
