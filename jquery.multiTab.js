@@ -114,7 +114,7 @@
         var $this = this;
 
         // $this에 개별 적용(반복)
-        $.each($this, function(index,el) {
+        return $.each($this, function(index,el) {
 
             // 개별 $() 인스턴스 객체 참조
             var $$this = $this.eq(index);
